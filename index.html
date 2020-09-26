@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This is a SEO change. -->
+    <meta name="robots" content="index, archive" />
     <title>Personal Budget</title>
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
-
-    <div class="menu">
+        <!-- This is a Semantic HTML change. -->
+        <nav>
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about.html">About</a></li>
             <li><a href="/login.html">Login</a></li>
             <li><a href="https://google.com">Google</a></li>
         </ul>
-    </div>
+        </nav>
+    
 
     <div class="hero">
         <h1>Personal Budget</h1>
@@ -98,6 +101,28 @@
     <div class="bottom">
         <div class="center">
             All rights reserved &copy; Fabio Nolasco
+        </div>
+        <div>
+            <!-- This is an A11y change. Source: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            <script>
+                var mybutton = document.getElementById("myBtn");
+                    window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+                  {
+                    mybutton.style.display = "block";
+                  } else {
+                    mybutton.style.display = "none";
+                  }
+                }
+                
+                function topFunction() {
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                }
+                </script>
         </div>
     </div>
 
